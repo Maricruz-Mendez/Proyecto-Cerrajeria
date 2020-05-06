@@ -16,5 +16,10 @@ namespace Cerrajeria_2
         {
             InitializeComponent();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

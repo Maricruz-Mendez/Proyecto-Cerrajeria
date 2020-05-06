@@ -16,7 +16,7 @@ namespace Cerrajeria_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Empleado());
+            Application.Run(new Principal());
         }
     }
 }

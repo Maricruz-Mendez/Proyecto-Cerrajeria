@@ -31,23 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRazon = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDomicilio = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtRFC = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,42 +72,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Usuario";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Cerrajeria_2.Properties.Resources.usuario;
-            this.pictureBox1.Location = new System.Drawing.Point(584, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = global::Cerrajeria_2.Properties.Resources.Equis;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(509, 283);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(82, 33);
-            this.btnCancelar.TabIndex = 10;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Image = global::Cerrajeria_2.Properties.Resources.multimedia2;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(597, 283);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(82, 33);
-            this.btnGuardar.TabIndex = 9;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(462, 109);
@@ -121,6 +85,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(195, 20);
             this.txtTelefono.TabIndex = 22;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtNombre
             // 
@@ -128,6 +93,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(195, 20);
             this.txtNombre.TabIndex = 21;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label7
             // 
@@ -159,12 +125,12 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Nombre Cliente";
             // 
-            // textBox1
+            // txtRazon
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 20);
-            this.textBox1.TabIndex = 25;
+            this.txtRazon.Location = new System.Drawing.Point(143, 109);
+            this.txtRazon.Name = "txtRazon";
+            this.txtRazon.Size = new System.Drawing.Size(195, 20);
+            this.txtRazon.TabIndex = 25;
             // 
             // label4
             // 
@@ -176,12 +142,12 @@
             this.label4.TabIndex = 24;
             this.label4.Text = "Razón Social";
             // 
-            // textBox2
+            // txtDomicilio
             // 
-            this.textBox2.Location = new System.Drawing.Point(143, 149);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 20);
-            this.textBox2.TabIndex = 27;
+            this.txtDomicilio.Location = new System.Drawing.Point(143, 149);
+            this.txtDomicilio.Name = "txtDomicilio";
+            this.txtDomicilio.Size = new System.Drawing.Size(195, 20);
+            this.txtDomicilio.TabIndex = 27;
             // 
             // label5
             // 
@@ -193,12 +159,12 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "Domicilio Fiscal";
             // 
-            // textBox3
+            // txtRFC
             // 
-            this.textBox3.Location = new System.Drawing.Point(143, 187);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(195, 20);
-            this.textBox3.TabIndex = 29;
+            this.txtRFC.Location = new System.Drawing.Point(143, 187);
+            this.txtRFC.Name = "txtRFC";
+            this.txtRFC.Size = new System.Drawing.Size(195, 20);
+            this.txtRFC.TabIndex = 29;
             // 
             // label8
             // 
@@ -210,12 +176,13 @@
             this.label8.TabIndex = 28;
             this.label8.Text = "RFC";
             // 
-            // textBox4
+            // txtCodigo
             // 
-            this.textBox4.Location = new System.Drawing.Point(143, 227);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(195, 20);
-            this.textBox4.TabIndex = 31;
+            this.txtCodigo.Location = new System.Drawing.Point(143, 227);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(195, 20);
+            this.txtCodigo.TabIndex = 31;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label9
             // 
@@ -227,18 +194,56 @@
             this.label9.TabIndex = 30;
             this.label9.Text = "Código Postal";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = global::Cerrajeria_2.Properties.Resources.Equis;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(509, 283);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(82, 33);
+            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Image = global::Cerrajeria_2.Properties.Resources.multimedia2;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(597, 283);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(82, 33);
+            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cerrajeria_2.Properties.Resources.usuario;
+            this.pictureBox1.Location = new System.Drawing.Point(584, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 328);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtRFC);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDomicilio);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRazon);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtTelefono);
@@ -273,13 +278,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRazon;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDomicilio;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtRFC;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label9;
     }
 }
