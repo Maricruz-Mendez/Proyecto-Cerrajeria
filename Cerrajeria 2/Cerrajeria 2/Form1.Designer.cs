@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleado));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,21 +39,29 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtCelular = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContra = new System.Windows.Forms.TextBox();
-            this.txtConfContra = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtConfContra = new Cerrajeria_2.ErrorTxtBox();
+            this.txtContra = new Cerrajeria_2.ErrorTxtBox();
+            this.txtUsuario = new Cerrajeria_2.ErrorTxtBox();
+            this.txtCorreo = new Cerrajeria_2.ErrorTxtBox();
+            this.txtTelefono = new Cerrajeria_2.ErrorTxtBox();
+            this.txtCelular = new Cerrajeria_2.ErrorTxtBox();
+            this.txtDireccion = new Cerrajeria_2.ErrorTxtBox();
+            this.txtNombre = new Cerrajeria_2.ErrorTxtBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -146,69 +155,19 @@
             this.label9.TabIndex = 12;
             this.label9.Text = "Usuario";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(92, 70);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(195, 20);
-            this.txtNombre.TabIndex = 13;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(92, 111);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(195, 20);
-            this.txtDireccion.TabIndex = 14;
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Location = new System.Drawing.Point(92, 147);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(195, 20);
-            this.txtCelular.TabIndex = 15;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(92, 186);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(195, 20);
-            this.txtTelefono.TabIndex = 16;
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(92, 222);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(195, 20);
-            this.txtCorreo.TabIndex = 17;
-            // 
             // cmbTipoUsuario
             // 
             this.cmbTipoUsuario.FormattingEnabled = true;
+            this.cmbTipoUsuario.Items.AddRange(new object[] {
+            "Administrador",
+            "Auxiliar Móvil",
+            "Auxiliar de Planta"});
             this.cmbTipoUsuario.Location = new System.Drawing.Point(440, 66);
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
             this.cmbTipoUsuario.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoUsuario.TabIndex = 18;
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(440, 108);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(121, 20);
-            this.txtUsuario.TabIndex = 19;
-            // 
-            // txtContra
-            // 
-            this.txtContra.Location = new System.Drawing.Point(440, 147);
-            this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(121, 20);
-            this.txtContra.TabIndex = 20;
-            // 
-            // txtConfContra
-            // 
-            this.txtConfContra.Location = new System.Drawing.Point(440, 183);
-            this.txtConfContra.Name = "txtConfContra";
-            this.txtConfContra.Size = new System.Drawing.Size(121, 20);
-            this.txtConfContra.TabIndex = 21;
+            this.cmbTipoUsuario.SelectedIndexChanged += new System.EventHandler(this.cmbTipoUsuario_SelectedIndexChanged);
+            this.cmbTipoUsuario.Leave += new System.EventHandler(this.cmbTipoUsuario_Leave);
             // 
             // label10
             // 
@@ -266,23 +225,111 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
+            // txtConfContra
+            // 
+            this.txtConfContra.Location = new System.Drawing.Point(440, 189);
+            this.txtConfContra.Name = "txtConfContra";
+            this.txtConfContra.PasswordChar = '*';
+            this.txtConfContra.Size = new System.Drawing.Size(121, 20);
+            this.txtConfContra.TabIndex = 31;
+            this.txtConfContra.Validar = true;
+            this.txtConfContra.Leave += new System.EventHandler(this.txtConfContra_Leave);
+            // 
+            // txtContra
+            // 
+            this.txtContra.Location = new System.Drawing.Point(440, 150);
+            this.txtContra.Name = "txtContra";
+            this.txtContra.PasswordChar = '*';
+            this.txtContra.Size = new System.Drawing.Size(121, 20);
+            this.txtContra.TabIndex = 30;
+            this.txtContra.Validar = true;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(440, 108);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(121, 20);
+            this.txtUsuario.TabIndex = 29;
+            this.txtUsuario.Validar = true;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(92, 219);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(195, 20);
+            this.txtCorreo.TabIndex = 28;
+            this.txtCorreo.Validar = true;
+            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(92, 183);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(195, 20);
+            this.txtTelefono.TabIndex = 27;
+            this.txtTelefono.Validar = true;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Location = new System.Drawing.Point(92, 144);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(195, 20);
+            this.txtCelular.TabIndex = 26;
+            this.txtCelular.Validar = true;
+            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(92, 108);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(195, 20);
+            this.txtDireccion.TabIndex = 25;
+            this.txtDireccion.Validar = true;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(92, 66);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(195, 20);
+            this.txtNombre.TabIndex = 24;
+            this.txtNombre.Validar = true;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 328);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.txtConfContra);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.cmbTipoUsuario);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.cmbTipoUsuario);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -299,6 +346,10 @@
             this.Name = "Empleado";
             this.Text = "Registro de Empleados";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,17 +369,21 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtCelular;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.ComboBox cmbTipoUsuario;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtContra;
-        private System.Windows.Forms.TextBox txtConfContra;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private ErrorTxtBox txtNombre;
+        private ErrorTxtBox txtDireccion;
+        private ErrorTxtBox txtCelular;
+        private ErrorTxtBox txtTelefono;
+        private ErrorTxtBox txtCorreo;
+        private ErrorTxtBox txtUsuario;
+        private ErrorTxtBox txtContra;
+        private ErrorTxtBox txtConfContra;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        public System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
     }
 }
 

@@ -28,17 +28,20 @@ namespace Cerrajeria_2
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (V.ValidarFormulario(this, errorProvider2) == false && CorreoErroneo==true) 
+            if (V.ValidarFormulario(this, errorProvider2) == false && CorreoErroneo == false)
             {
                 MessageBox.Show("Datos Asignados correctamente");
                 //Se agrega a la base de datos
                 LimpiarCampos();
-                
+                errorProvider2.Clear();
+                LimpiarCampos();
+
             }
             else
             {
                 MessageBox.Show("No se agregaron los datos");
             }
+
 
         }
 
@@ -71,12 +74,12 @@ namespace Cerrajeria_2
             if (Regex.IsMatch(txtCorreo.Text, patron))
             {
                 errorProvider1.Clear();
-                CorreoErroneo = true;
+                CorreoErroneo = false;
             }
             else
             {
                 errorProvider1.SetError(this.txtCorreo, "Escriba un correo válido");
-                CorreoErroneo = false;
+                CorreoErroneo = true;
             }
         }
 
