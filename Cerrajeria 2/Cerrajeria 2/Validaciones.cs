@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Cerrajeria_2
 {
-    class Validaciones
+    public class Validaciones
     {
         public void SoloLetras(KeyPressEventArgs e)
         {
@@ -64,5 +64,35 @@ namespace Cerrajeria_2
 
             }
         }
+
+        public Boolean ValidarFormulario(Control Objeto,ErrorProvider errorProvider)
+        {
+            Boolean HayErrores = false;
+
+            foreach(Control Item in Objeto.Controls)
+            {
+                if(Item is ErrorTxtBox)
+                {
+                    ErrorTxtBox Obj = (ErrorTxtBox)Item;
+
+                    if(Obj.Validar==true)
+                    {
+                        if(string.IsNullOrEmpty(Obj.Text.Trim()))
+                        {
+                            errorProvider.SetError(Obj,"No puede estar vacío");
+                            HayErrores = true;
+                        }
+                    }
+                    else
+                    {
+                        errorProvider.SetError(Obj, "");
+                    }
+                }
+            }
+
+            return HayErrores;
+        }
+
+        
     }
 }

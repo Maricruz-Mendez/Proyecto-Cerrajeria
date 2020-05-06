@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Cerrajeria_2
 {  
@@ -14,6 +15,7 @@ namespace Cerrajeria_2
     {
 
         Validaciones V = new Validaciones();
+        bool CorreoErroneo = false;
         public Cliente()
         {
             InitializeComponent();
@@ -26,6 +28,17 @@ namespace Cerrajeria_2
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (V.ValidarFormulario(this, errorProvider2) == false && CorreoErroneo==true) 
+            {
+                MessageBox.Show("Datos Asignados correctamente");
+                //Se agrega a la base de datos
+                LimpiarCampos();
+                
+            }
+            else
+            {
+                MessageBox.Show("No se agregaron los datos");
+            }
 
         }
 
@@ -40,12 +53,6 @@ namespace Cerrajeria_2
             txtTelefono.Text = "";
         }
 
-        
-
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            V.SoloLetras(e);
-        }
 
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -55,6 +62,27 @@ namespace Cerrajeria_2
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             V.SoloNumeros(e);
+        }
+
+        private void txtCorreo_Leave(object sender, EventArgs e)
+        {
+            string patron = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+
+            if (Regex.IsMatch(txtCorreo.Text, patron))
+            {
+                errorProvider1.Clear();
+                CorreoErroneo = true;
+            }
+            else
+            {
+                errorProvider1.SetError(this.txtCorreo, "Escriba un correo válido");
+                CorreoErroneo = false;
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            V.SoloLetras(e);
         }
     }
 }

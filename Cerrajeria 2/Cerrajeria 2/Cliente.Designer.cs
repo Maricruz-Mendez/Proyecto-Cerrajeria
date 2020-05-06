@@ -28,27 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtRazon = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtDomicilio = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtRFC = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtCorreo = new Cerrajeria_2.ErrorTxtBox();
+            this.txtTelefono = new Cerrajeria_2.ErrorTxtBox();
+            this.txtCodigo = new Cerrajeria_2.ErrorTxtBox();
+            this.txtRFC = new Cerrajeria_2.ErrorTxtBox();
+            this.txtDomicilio = new Cerrajeria_2.ErrorTxtBox();
+            this.txtRazon = new Cerrajeria_2.ErrorTxtBox();
+            this.txtNombre = new Cerrajeria_2.ErrorTxtBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -71,29 +76,6 @@
             this.label1.Size = new System.Drawing.Size(48, 12);
             this.label1.TabIndex = 8;
             this.label1.Text = "Usuario";
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(462, 109);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(195, 20);
-            this.txtCorreo.TabIndex = 23;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(462, 73);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(195, 20);
-            this.txtTelefono.TabIndex = 22;
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(143, 74);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(195, 20);
-            this.txtNombre.TabIndex = 21;
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label7
             // 
@@ -125,13 +107,6 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Nombre Cliente";
             // 
-            // txtRazon
-            // 
-            this.txtRazon.Location = new System.Drawing.Point(143, 109);
-            this.txtRazon.Name = "txtRazon";
-            this.txtRazon.Size = new System.Drawing.Size(195, 20);
-            this.txtRazon.TabIndex = 25;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -141,13 +116,6 @@
             this.label4.Size = new System.Drawing.Size(95, 17);
             this.label4.TabIndex = 24;
             this.label4.Text = "Razón Social";
-            // 
-            // txtDomicilio
-            // 
-            this.txtDomicilio.Location = new System.Drawing.Point(143, 149);
-            this.txtDomicilio.Name = "txtDomicilio";
-            this.txtDomicilio.Size = new System.Drawing.Size(195, 20);
-            this.txtDomicilio.TabIndex = 27;
             // 
             // label5
             // 
@@ -159,13 +127,6 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "Domicilio Fiscal";
             // 
-            // txtRFC
-            // 
-            this.txtRFC.Location = new System.Drawing.Point(143, 187);
-            this.txtRFC.Name = "txtRFC";
-            this.txtRFC.Size = new System.Drawing.Size(195, 20);
-            this.txtRFC.TabIndex = 29;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -175,14 +136,6 @@
             this.label8.Size = new System.Drawing.Size(39, 17);
             this.label8.TabIndex = 28;
             this.label8.Text = "RFC";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(143, 227);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(195, 20);
-            this.txtCodigo.TabIndex = 31;
-            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label9
             // 
@@ -232,22 +185,90 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(462, 106);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(195, 20);
+            this.txtCorreo.TabIndex = 39;
+            this.txtCorreo.Validar = true;
+            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(462, 70);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(195, 20);
+            this.txtTelefono.TabIndex = 38;
+            this.txtTelefono.Validar = true;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(143, 227);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(195, 20);
+            this.txtCodigo.TabIndex = 37;
+            this.txtCodigo.Validar = true;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
+            // 
+            // txtRFC
+            // 
+            this.txtRFC.Location = new System.Drawing.Point(143, 187);
+            this.txtRFC.Name = "txtRFC";
+            this.txtRFC.Size = new System.Drawing.Size(195, 20);
+            this.txtRFC.TabIndex = 35;
+            this.txtRFC.Validar = true;
+            // 
+            // txtDomicilio
+            // 
+            this.txtDomicilio.Location = new System.Drawing.Point(143, 149);
+            this.txtDomicilio.Name = "txtDomicilio";
+            this.txtDomicilio.Size = new System.Drawing.Size(195, 20);
+            this.txtDomicilio.TabIndex = 34;
+            this.txtDomicilio.Validar = true;
+            // 
+            // txtRazon
+            // 
+            this.txtRazon.Location = new System.Drawing.Point(143, 112);
+            this.txtRazon.Name = "txtRazon";
+            this.txtRazon.Size = new System.Drawing.Size(195, 20);
+            this.txtRazon.TabIndex = 33;
+            this.txtRazon.Validar = true;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(143, 74);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(195, 20);
+            this.txtNombre.TabIndex = 32;
+            this.txtNombre.Validar = true;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 328);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtRFC);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtDomicilio);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtRazon);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.txtRFC);
+            this.Controls.Add(this.txtDomicilio);
+            this.Controls.Add(this.txtRazon);
             this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -260,6 +281,8 @@
             this.Name = "Cliente";
             this.Text = "Registro de Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,19 +295,21 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtRazon;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtDomicilio;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtRFC;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private ErrorTxtBox txtRFC;
+        private ErrorTxtBox txtDomicilio;
+        private ErrorTxtBox txtRazon;
+        private ErrorTxtBox txtNombre;
+        public System.Windows.Forms.ErrorProvider errorProvider2;
+        private ErrorTxtBox txtCodigo;
+        private ErrorTxtBox txtTelefono;
+        private ErrorTxtBox txtCorreo;
     }
 }
