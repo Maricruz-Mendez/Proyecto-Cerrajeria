@@ -30,6 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.label1 = new System.Windows.Forms.Label();
+            this.btnCCliente = new System.Windows.Forms.Button();
+            this.btnCTrabajo = new System.Windows.Forms.Button();
+            this.btnCFecha = new System.Windows.Forms.Button();
+            this.btnLLave = new System.Windows.Forms.Button();
+            this.btnSemana = new System.Windows.Forms.Button();
+            this.btnMes = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnReporte = new System.Windows.Forms.Button();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.btnEmpleado = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
@@ -37,14 +46,7 @@
             this.btnTrabajos = new System.Windows.Forms.Button();
             this.btnRegistros = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnConsulta = new System.Windows.Forms.Button();
-            this.btnReporte = new System.Windows.Forms.Button();
-            this.btnCCliente = new System.Windows.Forms.Button();
-            this.btnCTrabajo = new System.Windows.Forms.Button();
-            this.btnCFecha = new System.Windows.Forms.Button();
-            this.btnLLave = new System.Windows.Forms.Button();
-            this.btnSemana = new System.Windows.Forms.Button();
-            this.btnMes = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +60,140 @@
             this.label1.Size = new System.Drawing.Size(48, 12);
             this.label1.TabIndex = 10;
             this.label1.Text = "Usuario";
+            // 
+            // btnCCliente
+            // 
+            this.btnCCliente.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnCCliente.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCCliente.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCCliente.Location = new System.Drawing.Point(295, 343);
+            this.btnCCliente.Name = "btnCCliente";
+            this.btnCCliente.Size = new System.Drawing.Size(177, 25);
+            this.btnCCliente.TabIndex = 21;
+            this.btnCCliente.Text = "Cliente";
+            this.btnCCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCCliente.UseVisualStyleBackColor = false;
+            this.btnCCliente.Visible = false;
+            // 
+            // btnCTrabajo
+            // 
+            this.btnCTrabajo.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnCTrabajo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCTrabajo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCTrabajo.Location = new System.Drawing.Point(295, 367);
+            this.btnCTrabajo.Name = "btnCTrabajo";
+            this.btnCTrabajo.Size = new System.Drawing.Size(177, 25);
+            this.btnCTrabajo.TabIndex = 22;
+            this.btnCTrabajo.Text = "Trabajo";
+            this.btnCTrabajo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCTrabajo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCTrabajo.UseVisualStyleBackColor = false;
+            this.btnCTrabajo.Visible = false;
+            // 
+            // btnCFecha
+            // 
+            this.btnCFecha.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnCFecha.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCFecha.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCFecha.Location = new System.Drawing.Point(295, 391);
+            this.btnCFecha.Name = "btnCFecha";
+            this.btnCFecha.Size = new System.Drawing.Size(177, 25);
+            this.btnCFecha.TabIndex = 23;
+            this.btnCFecha.Text = "Fecha";
+            this.btnCFecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCFecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCFecha.UseVisualStyleBackColor = false;
+            this.btnCFecha.Visible = false;
+            // 
+            // btnLLave
+            // 
+            this.btnLLave.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnLLave.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLLave.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLLave.Location = new System.Drawing.Point(295, 416);
+            this.btnLLave.Name = "btnLLave";
+            this.btnLLave.Size = new System.Drawing.Size(177, 25);
+            this.btnLLave.TabIndex = 24;
+            this.btnLLave.Text = "Llave mas usada";
+            this.btnLLave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLLave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLLave.UseVisualStyleBackColor = false;
+            this.btnLLave.Visible = false;
+            // 
+            // btnSemana
+            // 
+            this.btnSemana.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnSemana.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSemana.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSemana.Location = new System.Drawing.Point(295, 439);
+            this.btnSemana.Name = "btnSemana";
+            this.btnSemana.Size = new System.Drawing.Size(177, 25);
+            this.btnSemana.TabIndex = 25;
+            this.btnSemana.Text = "Semana";
+            this.btnSemana.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSemana.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSemana.UseVisualStyleBackColor = false;
+            this.btnSemana.Visible = false;
+            // 
+            // btnMes
+            // 
+            this.btnMes.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnMes.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMes.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnMes.Location = new System.Drawing.Point(295, 463);
+            this.btnMes.Name = "btnMes";
+            this.btnMes.Size = new System.Drawing.Size(177, 25);
+            this.btnMes.TabIndex = 26;
+            this.btnMes.Text = "Mes";
+            this.btnMes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMes.UseVisualStyleBackColor = false;
+            this.btnMes.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Cerrajeria_2.Properties.Resources.Candado;
+            this.pictureBox2.Location = new System.Drawing.Point(523, 130);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(144, 148);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 27;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.BackColor = System.Drawing.SystemColors.Info;
+            this.btnReporte.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReporte.Image = global::Cerrajeria_2.Properties.Resources.icon__1_;
+            this.btnReporte.Location = new System.Drawing.Point(120, 416);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(177, 60);
+            this.btnReporte.TabIndex = 20;
+            this.btnReporte.Text = "   Reportes";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Visible = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+            // btnConsulta
+            // 
+            this.btnConsulta.BackColor = System.Drawing.SystemColors.Info;
+            this.btnConsulta.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsulta.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnConsulta.Image = global::Cerrajeria_2.Properties.Resources.monitor__1_;
+            this.btnConsulta.Location = new System.Drawing.Point(120, 356);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(177, 60);
+            this.btnConsulta.TabIndex = 19;
+            this.btnConsulta.Text = "  Consulta";
+            this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsulta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConsulta.UseVisualStyleBackColor = false;
+            this.btnConsulta.Visible = false;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // btnEmpleado
             // 
@@ -163,136 +299,13 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // btnConsulta
-            // 
-            this.btnConsulta.BackColor = System.Drawing.SystemColors.Info;
-            this.btnConsulta.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsulta.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnConsulta.Image = global::Cerrajeria_2.Properties.Resources.monitor__1_;
-            this.btnConsulta.Location = new System.Drawing.Point(120, 356);
-            this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(177, 60);
-            this.btnConsulta.TabIndex = 19;
-            this.btnConsulta.Text = "  Consulta";
-            this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsulta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnConsulta.UseVisualStyleBackColor = false;
-            this.btnConsulta.Visible = false;
-            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.BackColor = System.Drawing.SystemColors.Info;
-            this.btnReporte.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporte.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReporte.Image = global::Cerrajeria_2.Properties.Resources.icon__1_;
-            this.btnReporte.Location = new System.Drawing.Point(120, 416);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(177, 60);
-            this.btnReporte.TabIndex = 20;
-            this.btnReporte.Text = "   Reportes";
-            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReporte.UseVisualStyleBackColor = false;
-            this.btnReporte.Visible = false;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
-            // 
-            // btnCCliente
-            // 
-            this.btnCCliente.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnCCliente.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCCliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCCliente.Location = new System.Drawing.Point(295, 343);
-            this.btnCCliente.Name = "btnCCliente";
-            this.btnCCliente.Size = new System.Drawing.Size(177, 25);
-            this.btnCCliente.TabIndex = 21;
-            this.btnCCliente.Text = "Cliente";
-            this.btnCCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCCliente.UseVisualStyleBackColor = false;
-            this.btnCCliente.Visible = false;
-            // 
-            // btnCTrabajo
-            // 
-            this.btnCTrabajo.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnCTrabajo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCTrabajo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCTrabajo.Location = new System.Drawing.Point(295, 367);
-            this.btnCTrabajo.Name = "btnCTrabajo";
-            this.btnCTrabajo.Size = new System.Drawing.Size(177, 25);
-            this.btnCTrabajo.TabIndex = 22;
-            this.btnCTrabajo.Text = "Trabajo";
-            this.btnCTrabajo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCTrabajo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCTrabajo.UseVisualStyleBackColor = false;
-            this.btnCTrabajo.Visible = false;
-            // 
-            // btnCFecha
-            // 
-            this.btnCFecha.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnCFecha.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCFecha.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCFecha.Location = new System.Drawing.Point(295, 391);
-            this.btnCFecha.Name = "btnCFecha";
-            this.btnCFecha.Size = new System.Drawing.Size(177, 25);
-            this.btnCFecha.TabIndex = 23;
-            this.btnCFecha.Text = "Fecha";
-            this.btnCFecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCFecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCFecha.UseVisualStyleBackColor = false;
-            this.btnCFecha.Visible = false;
-            // 
-            // btnLLave
-            // 
-            this.btnLLave.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnLLave.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLLave.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLLave.Location = new System.Drawing.Point(295, 416);
-            this.btnLLave.Name = "btnLLave";
-            this.btnLLave.Size = new System.Drawing.Size(177, 25);
-            this.btnLLave.TabIndex = 24;
-            this.btnLLave.Text = "Llave mas usada";
-            this.btnLLave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLLave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLLave.UseVisualStyleBackColor = false;
-            this.btnLLave.Visible = false;
-            // 
-            // btnSemana
-            // 
-            this.btnSemana.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnSemana.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSemana.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSemana.Location = new System.Drawing.Point(295, 439);
-            this.btnSemana.Name = "btnSemana";
-            this.btnSemana.Size = new System.Drawing.Size(177, 25);
-            this.btnSemana.TabIndex = 25;
-            this.btnSemana.Text = "Semana";
-            this.btnSemana.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSemana.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSemana.UseVisualStyleBackColor = false;
-            this.btnSemana.Visible = false;
-            // 
-            // btnMes
-            // 
-            this.btnMes.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnMes.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnMes.Location = new System.Drawing.Point(295, 463);
-            this.btnMes.Name = "btnMes";
-            this.btnMes.Size = new System.Drawing.Size(177, 25);
-            this.btnMes.TabIndex = 26;
-            this.btnMes.Text = "Mes";
-            this.btnMes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMes.UseVisualStyleBackColor = false;
-            this.btnMes.Visible = false;
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(800, 493);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnMes);
             this.Controls.Add(this.btnSemana);
             this.Controls.Add(this.btnLLave);
@@ -313,6 +326,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Principal";
             this.Text = "Cerrajería";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -337,5 +351,6 @@
         private System.Windows.Forms.Button btnLLave;
         private System.Windows.Forms.Button btnSemana;
         private System.Windows.Forms.Button btnMes;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
