@@ -15,9 +15,10 @@ namespace Cerrajeria_2
     public partial class Empleado : Form
     {
         Validaciones V = new Validaciones();
+        Conexion miConexion = new Conexion();
         bool CorreoErroneo = false;
         bool ContraValida = false;
-        bool cmbSeleccion = false;
+
         
 
         public Empleado()
@@ -30,33 +31,14 @@ namespace Cerrajeria_2
             this.Close();
         }
 
-        private void txtCorreo_Leave(object sender, EventArgs e)
-        {
-            string patron = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
-
-            if (Regex.IsMatch(txtCorreo.Text, patron))
-            {
-                errorProvider1.Clear();
-                //CorreoErroneo = true;
-                CorreoErroneo = false;
-            }
-            else
-            {
-                errorProvider1.SetError(this.txtCorreo, "Escriba un correo válido");
-                //CorreoErroneo = false;
-                CorreoErroneo = true;
-            }
-        }
+        
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             V.SoloLetras(e);
         }
 
-        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            V.SoloNumeros(e);
-        }
+
 
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -65,10 +47,13 @@ namespace Cerrajeria_2
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (V.ValidarFormulario(this, errorProvider2) == false && CorreoErroneo == false && ContraValida && cmbSeleccion) 
+            DateTime hoy = DateTime.Now;
+            if (V.ValidarFormulario(this, errorProvider2) == false && CorreoErroneo == false && ContraValida) 
             {
-                MessageBox.Show("Datos Asignados correctamente");
+                //MessageBox.Show("Datos Asignados correctamente");
                 //Se agrega a la base de datos
+                MessageBox.Show(miConexion.RegistrarEmpleado(txtUsuario.Text, txtContra.Text, txtNombre.Text, txtApellidoP.Text, txtApellidoM.Text, dtmNacimiento.Text, hoy.ToShortDateString(), txtDireccion.Text, int.Parse(txtTelefono.Text)));
+
                 LimpiarCampos();
                 errorProvider2.Clear();
 
@@ -84,15 +69,14 @@ namespace Cerrajeria_2
         {
             txtNombre.Text = "";
             txtDireccion.Text = "";
-            txtCelular.Text = "";
             txtTelefono.Text = "";
             txtDireccion.Text = "";
-            cmbTipoUsuario.Text = "";
             txtUsuario.Text = "";
             txtConfContra.Text = "";
-            txtCorreo.Text = "";
             txtConfContra.Text = "";
             txtContra.Text = "";
+            txtApellidoM.Text = "";
+            txtApellidoP.Text = "";
 
         }
 
@@ -110,23 +94,14 @@ namespace Cerrajeria_2
             }
         }
 
-        private void cmbTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtApellidoP_KeyPress(object sender, KeyPressEventArgs e)
         {
-            cmbSeleccion = true;
-           
+            V.SoloLetras(e);
         }
 
-        private void cmbTipoUsuario_Leave(object sender, EventArgs e)
+        private void txtApellidoM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (cmbSeleccion)
-            {
-                //NADA
-                errorProvider4.Clear();
-            }
-            else
-            {
-                errorProvider4.SetError(cmbTipoUsuario, "Seleccione un tipo de Usuario");
-            }
+            V.SoloLetras(e);
         }
     }
 }

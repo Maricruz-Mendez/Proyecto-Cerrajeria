@@ -15,8 +15,9 @@ namespace Cerrajeria_2
         public Principal()
         {
             InitializeComponent();
+            Conexion c = new Conexion();
         }
-
+        
         private void btnRegistros_Click(object sender, EventArgs e)
         {
             btnCliente.Visible = true;

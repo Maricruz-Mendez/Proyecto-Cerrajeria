@@ -34,12 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,11 +48,15 @@
             this.txtConfContra = new Cerrajeria_2.ErrorTxtBox();
             this.txtContra = new Cerrajeria_2.ErrorTxtBox();
             this.txtUsuario = new Cerrajeria_2.ErrorTxtBox();
-            this.txtCorreo = new Cerrajeria_2.ErrorTxtBox();
             this.txtTelefono = new Cerrajeria_2.ErrorTxtBox();
-            this.txtCelular = new Cerrajeria_2.ErrorTxtBox();
             this.txtDireccion = new Cerrajeria_2.ErrorTxtBox();
             this.txtNombre = new Cerrajeria_2.ErrorTxtBox();
+            this.txtApellidoP = new Cerrajeria_2.ErrorTxtBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtApellidoM = new Cerrajeria_2.ErrorTxtBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dtmNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -99,81 +99,37 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 111);
+            this.label4.Location = new System.Drawing.Point(355, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Dirección";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 144);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Celular";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 186);
+            this.label6.Location = new System.Drawing.Point(13, 232);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 17);
             this.label6.TabIndex = 9;
             this.label6.Text = "Teléfono";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 222);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 17);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Correo ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(335, 70);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 17);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Tipo Usuario";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(335, 111);
+            this.label9.Location = new System.Drawing.Point(353, 69);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 17);
             this.label9.TabIndex = 12;
             this.label9.Text = "Usuario";
             // 
-            // cmbTipoUsuario
-            // 
-            this.cmbTipoUsuario.FormattingEnabled = true;
-            this.cmbTipoUsuario.Items.AddRange(new object[] {
-            "Administrador",
-            "Auxiliar Móvil",
-            "Auxiliar de Planta"});
-            this.cmbTipoUsuario.Location = new System.Drawing.Point(440, 66);
-            this.cmbTipoUsuario.Name = "cmbTipoUsuario";
-            this.cmbTipoUsuario.Size = new System.Drawing.Size(121, 21);
-            this.cmbTipoUsuario.TabIndex = 18;
-            this.cmbTipoUsuario.SelectedIndexChanged += new System.EventHandler(this.cmbTipoUsuario_SelectedIndexChanged);
-            this.cmbTipoUsuario.Leave += new System.EventHandler(this.cmbTipoUsuario_Leave);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(335, 150);
+            this.label10.Location = new System.Drawing.Point(353, 108);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 17);
             this.label10.TabIndex = 22;
@@ -183,7 +139,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(335, 189);
+            this.label11.Location = new System.Drawing.Point(353, 147);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(95, 17);
             this.label11.TabIndex = 23;
@@ -245,7 +201,7 @@
             // 
             // txtConfContra
             // 
-            this.txtConfContra.Location = new System.Drawing.Point(440, 189);
+            this.txtConfContra.Location = new System.Drawing.Point(458, 147);
             this.txtConfContra.Name = "txtConfContra";
             this.txtConfContra.PasswordChar = '*';
             this.txtConfContra.Size = new System.Drawing.Size(121, 20);
@@ -255,7 +211,7 @@
             // 
             // txtContra
             // 
-            this.txtContra.Location = new System.Drawing.Point(440, 150);
+            this.txtContra.Location = new System.Drawing.Point(458, 108);
             this.txtContra.Name = "txtContra";
             this.txtContra.PasswordChar = '*';
             this.txtContra.Size = new System.Drawing.Size(121, 20);
@@ -264,42 +220,24 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(440, 108);
+            this.txtUsuario.Location = new System.Drawing.Point(458, 66);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(121, 20);
             this.txtUsuario.TabIndex = 29;
             this.txtUsuario.Validar = true;
             // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(92, 219);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(195, 20);
-            this.txtCorreo.TabIndex = 28;
-            this.txtCorreo.Validar = true;
-            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
-            // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(92, 183);
+            this.txtTelefono.Location = new System.Drawing.Point(155, 229);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(195, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(123, 20);
             this.txtTelefono.TabIndex = 27;
             this.txtTelefono.Validar = true;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
-            // txtCelular
-            // 
-            this.txtCelular.Location = new System.Drawing.Point(92, 144);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(195, 20);
-            this.txtCelular.TabIndex = 26;
-            this.txtCelular.Validar = true;
-            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
-            // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(92, 108);
+            this.txtDireccion.Location = new System.Drawing.Point(458, 189);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(195, 20);
             this.txtDireccion.TabIndex = 25;
@@ -307,34 +245,91 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(92, 66);
+            this.txtNombre.Location = new System.Drawing.Point(155, 70);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(195, 20);
+            this.txtNombre.Size = new System.Drawing.Size(123, 20);
             this.txtNombre.TabIndex = 24;
             this.txtNombre.Validar = true;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            // 
+            // txtApellidoP
+            // 
+            this.txtApellidoP.Location = new System.Drawing.Point(155, 108);
+            this.txtApellidoP.Name = "txtApellidoP";
+            this.txtApellidoP.Size = new System.Drawing.Size(123, 20);
+            this.txtApellidoP.TabIndex = 33;
+            this.txtApellidoP.Validar = true;
+            this.txtApellidoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoP_KeyPress);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(13, 108);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(113, 17);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Apellido Paterno";
+            // 
+            // txtApellidoM
+            // 
+            this.txtApellidoM.Location = new System.Drawing.Point(155, 147);
+            this.txtApellidoM.Name = "txtApellidoM";
+            this.txtApellidoM.Size = new System.Drawing.Size(123, 20);
+            this.txtApellidoM.TabIndex = 35;
+            this.txtApellidoM.Validar = true;
+            this.txtApellidoM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoM_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(13, 151);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(114, 17);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "Apellido Materno";
+            // 
+            // dtmNacimiento
+            // 
+            this.dtmNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtmNacimiento.Location = new System.Drawing.Point(165, 189);
+            this.dtmNacimiento.Name = "dtmNacimiento";
+            this.dtmNacimiento.Size = new System.Drawing.Size(113, 20);
+            this.dtmNacimiento.TabIndex = 36;
+            this.dtmNacimiento.Value = new System.DateTime(2020, 5, 13, 19, 29, 19, 0);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(13, 192);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(146, 17);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "Fecha de Nacimiento";
             // 
             // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 328);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.dtmNacimiento);
+            this.Controls.Add(this.txtApellidoM);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtApellidoP);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.txtConfContra);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.cmbTipoUsuario);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -364,19 +359,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cmbTipoUsuario;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private ErrorTxtBox txtNombre;
         private ErrorTxtBox txtDireccion;
-        private ErrorTxtBox txtCelular;
         private ErrorTxtBox txtTelefono;
-        private ErrorTxtBox txtCorreo;
         private ErrorTxtBox txtUsuario;
         private ErrorTxtBox txtContra;
         private ErrorTxtBox txtConfContra;
@@ -384,6 +373,12 @@
         public System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
         private System.Windows.Forms.ErrorProvider errorProvider4;
+        private ErrorTxtBox txtApellidoM;
+        private System.Windows.Forms.Label label13;
+        private ErrorTxtBox txtApellidoP;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DateTimePicker dtmNacimiento;
     }
 }
 
