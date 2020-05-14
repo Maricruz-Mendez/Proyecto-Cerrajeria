@@ -10,3 +10,4 @@ C:\Users\ajedr\OneDrive\Documentos\GitHub\Ingenieria de Software Proyecto\Proyec
 C:\Users\ajedr\OneDrive\Documentos\GitHub\Ingenieria de Software Proyecto\Proyecto-Cerrajeria\Cerrajeria 2\Cerrajeria 2\obj\Debug\Cerrajeria 2.csproj.CoreCompileInputs.cache
 C:\Users\ajedr\OneDrive\Documentos\GitHub\Ingenieria de Software Proyecto\Proyecto-Cerrajeria\Cerrajeria 2\Cerrajeria 2\obj\Debug\Cerrajeria 2.exe
 C:\Users\ajedr\OneDrive\Documentos\GitHub\Ingenieria de Software Proyecto\Proyecto-Cerrajeria\Cerrajeria 2\Cerrajeria 2\obj\Debug\Cerrajeria 2.pdb
+C:\Users\ajedr\OneDrive\Documentos\GitHub\Ingenieria de Software Proyecto\Proyecto-Cerrajeria\Cerrajeria 2\Cerrajeria 2\obj\Debug\Cerrajeria_2.InicioSesion.resources
