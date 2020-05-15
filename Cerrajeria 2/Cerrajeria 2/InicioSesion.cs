@@ -14,6 +14,7 @@ namespace Cerrajeria_2
 {
     public partial class InicioSesion : Form
     {
+        //CAMBIO
         SqlConnection con = new SqlConnection("Data Source=LAPTOP-DTRPMJU7;Initial Catalog=Cerrajeria_Hns;Integrated Security=True");
         SqlDataReader read;
         string pwd;
